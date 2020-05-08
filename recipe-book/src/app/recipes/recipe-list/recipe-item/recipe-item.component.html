@@ -1,10 +1,11 @@
 <a 
   style="cursor: pointer;"
   [routerLink]="[index]"
+  routerLinkActive="active"
   class="list-group-item clearfix">
   <div class="float-left">
-    <h4 class="list-group-item-light m-0">{{ recipe.name }}</h4>
-    <p class="list-group-item-light m-0">{{ recipe.description }}</p>
+    <h4 class="m-0">{{ recipe.name }}</h4>
+    <p class="m-0">{{ recipe.description }}</p>
   </div>
   <span class="float-right">
     <img 
