@@ -9,8 +9,8 @@ export class RecipeService {
   
   private recipes: Recipe[] = [
     new Recipe(
-      'Chicken Soup with Nettle',
-      'Tasty chicken soup with nettle and yoghurt',
+      'Chicken Soup',
+      'Tasty chicken soup with nettle',
       'https://pinchofyum.com/wp-content/uploads/Lemon-Chicken-Soup-Square.jpg',
      [
        new Ingredient('Chicken', 1),
