@@ -4,10 +4,10 @@
     </div>
 
       <ul class="navbar-nav mr-auto">
-        <li class="nav-link" routerLinkActive="active">
+        <li class="nav-link" routerLinkActive="active" *ngIf="isAuthenticated">
           <a class="nav-link" routerLink="/recipes">Recipes</a>
         </li>
-        <li class="nav-link" routerLinkActive="active">
+        <li class="nav-link" routerLinkActive="active" *ngIf="!isAuthenticated">
           <a class="nav-link" routerLink="/auth">Authenticate</a>
         </li>
         <li class="nav-link" routerLinkActive="active">
@@ -15,7 +15,10 @@
         </li>
       </ul>
       <ul class="navbar-nav ml-auto">
-        <li class="dropdown" appDropdown>
+        <li *ngIf="isAuthenticated">
+          <a style="cursor: pointer" class="nav-link">Logout</a>
+        </li>
+        <li class="dropdown" appDropdown *ngIf="isAuthenticated">
           <a style="cursor: pointer;" class="dropdown-toggle nav-link" role="button">Manage <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a style="cursor: pointer;" (click)="onSaveData()">Save Data</a></li>
