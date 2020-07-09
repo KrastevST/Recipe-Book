@@ -4,7 +4,6 @@ import { throwError, BehaviorSubject } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 
 import { User } from './user.model';
-import { registerLocaleData } from '@angular/common';
 
 export interface AuthResponseData {
   kind: string
